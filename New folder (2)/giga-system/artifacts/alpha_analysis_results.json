@@ -1,0 +1,21 @@
+{
+  "total_signals": 1,
+  "last_direction": "HOLD",
+  "last_confidence": 0.0,
+  "last_kappa": 3.0559415753255066,
+  "last_entropy": 3.3158245234245065,
+  "last_kelly": 0.2020456695082299,
+  "last_ir": 0.09762672482220171,
+  "last_p_value": 0.8682553346996494,
+  "alpha_decay_rate": 0.0,
+  "current_ir": 0.0,
+  "hypothesis": "High \u03ba + Low Entropy = maximal Alpha",
+  "factors": {
+    "kappa_factor": 0.5139853938313766,
+    "entropy_factor": 0.0,
+    "gamma_factor": -0.3,
+    "kelly_factor": 0.2020456695082299,
+    "regime_factor": 0.0
+  },
+  "reason": "INSIGNIFICANT: p=0.8683"
+}

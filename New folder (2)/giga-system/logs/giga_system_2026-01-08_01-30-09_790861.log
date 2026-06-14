@@ -1,0 +1,7 @@
+2026-01-08 01:30:09 | INFO     | __main__:<module>:392 | GIGA System starting up
+2026-01-08 01:30:09 | DEBUG    | __main__:<module>:393 | Debug message with details
+2026-01-08 01:30:09 | WARNING  | __main__:<module>:394 | Warning message
+2026-01-08 01:30:09 | INFO     | __main__:log_performance:280 | Function black_scholes_calculation executed in 0.052ms using 1.20MB
+2026-01-08 01:30:09 | DEBUG    | __main__:log_greek_calculation:310 | Greeks calculated for AAPL: delta=0.6234, gamma=0.0156, theta=-0.0234
+2026-01-08 01:30:09 | INFO     | __main__:log_trade_execution:333 | Trade executed: BUY 100 AAPL @ 150.25 (latency: 2.3ms)
+2026-01-08 01:30:09 | INFO     | __main__:<module>:415 | Processing strategy with context

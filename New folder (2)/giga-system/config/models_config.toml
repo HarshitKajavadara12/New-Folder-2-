@@ -1,0 +1,210 @@
+# GIGA SYSTEM - Models Configuration
+# ====================================
+# Configuration for pricing, risk, and ML models
+
+# =============================================================================
+# OPTION PRICING MODELS
+# =============================================================================
+
+[black_scholes]
+enabled = true
+use_numba = true
+default_dividend_yield = 0.0
+
+[binomial_tree]
+enabled = true
+default_steps = 100
+max_steps = 1000
+american_exercise = true
+
+[monte_carlo]
+enabled = true
+default_paths = 100000
+max_paths = 1000000
+default_steps = 252
+variance_reduction = true
+use_antithetic = true
+use_control_variate = true
+# seed = null  # null for random seed
+
+[monte_carlo.parallel]
+enabled = true
+chunk_size = 10000
+n_jobs = -1  # -1 for all cores
+
+# =============================================================================
+# VOLATILITY MODELS
+# =============================================================================
+
+[implied_volatility]
+method = "newton_raphson"  # newton_raphson, brent, bisection
+max_iterations = 100
+tolerance = 1e-8
+initial_guess = 0.25
+bounds = [0.001, 5.0]
+
+[historical_volatility]
+default_window = 21
+annualization_factor = 252
+method = "close_to_close"  # close_to_close, parkinson, garman_klass, yang_zhang
+
+[garch]
+# GARCH model configuration (R-based)
+default_p = 1
+default_q = 1
+model = "sGARCH"  # sGARCH, eGARCH, gjrGARCH, apARCH
+distribution = "norm"  # norm, std, ged, snorm, sstd, sged
+solver = "hybrid"
+max_iterations = 1000
+
+[garch.forecast]
+default_horizon = 10
+simulation_paths = 1000
+out_sample_size = 0
+
+# =============================================================================
+# RISK MODELS
+# =============================================================================
+
+[var]
+# Value at Risk configuration
+method = "historical"  # historical, parametric, monte_carlo
+confidence_levels = [0.95, 0.99]
+window = 252
+min_observations = 100
+
+[var.parametric]
+distribution = "normal"  # normal, t, cornish_fisher
+degrees_of_freedom = 5
+
+[var.monte_carlo]
+simulations = 10000
+correlation_method = "pearson"  # pearson, kendall, spearman
+
+[cvar]
+# Conditional VaR (Expected Shortfall)
+enabled = true
+confidence_levels = [0.95, 0.99]
+
+[stress_test]
+scenarios = [
+    { name = "Market Crash", equity = -0.20, volatility = 2.0, rates = -0.01 },
+    { name = "Vol Spike", equity = -0.05, volatility = 3.0, rates = 0.0 },
+    { name = "Rate Shock", equity = -0.10, volatility = 1.5, rates = 0.02 },
+    { name = "Black Swan", equity = -0.35, volatility = 4.0, rates = -0.02 }
+]
+
+# =============================================================================
+# TIME SERIES MODELS
+# =============================================================================
+
+[arima]
+# ARIMA configuration (R-based)
+auto_select = true
+max_p = 5
+max_d = 2
+max_q = 5
+seasonal = false
+stepwise = true
+approximation = false
+
+[regime_detection]
+# Hidden Markov Model configuration
+n_regimes = 2
+covariance_type = "full"  # spherical, diag, full, tied
+n_iterations = 100
+tolerance = 1e-6
+
+# =============================================================================
+# MACHINE LEARNING MODELS
+# =============================================================================
+
+[ml.volatility_forecast]
+enabled = true
+model_type = "lightgbm"  # lightgbm, xgboost, random_forest
+features = [
+    "returns_lag_1", "returns_lag_5", "returns_lag_21",
+    "vol_lag_1", "vol_lag_5", "vol_lag_21",
+    "rsi_14", "macd_signal", "bb_width"
+]
+target = "realized_vol_5d"
+train_test_split = 0.8
+validation_split = 0.1
+
+[ml.volatility_forecast.hyperparams]
+n_estimators = 100
+max_depth = 6
+learning_rate = 0.1
+min_samples_leaf = 10
+
+[ml.regime_classification]
+enabled = true
+model_type = "hmm"  # hmm, kmeans, gmm
+n_regimes = 3
+features = ["returns", "volatility", "volume"]
+
+[ml.feature_engineering]
+# Automatic feature generation
+lookback_windows = [5, 10, 21, 63, 126, 252]
+technical_indicators = [
+    "sma", "ema", "rsi", "macd", "bollinger",
+    "atr", "adx", "obv", "vwap"
+]
+normalize = true
+handle_missing = "drop"  # drop, forward_fill, interpolate
+
+# =============================================================================
+# QUANTUM MODELS
+# =============================================================================
+
+[quantum]
+enabled = true
+backend = "qasm_simulator"  # qasm_simulator, statevector_simulator, ibmq
+shots = 1024
+optimization_level = 1
+
+[quantum.portfolio]
+# Quantum portfolio optimization
+method = "QAOA"  # QAOA, VQE
+p_layers = 2
+optimizer = "COBYLA"
+max_iterations = 500
+
+[quantum.monte_carlo]
+# Quantum Monte Carlo
+enabled = true
+n_qubits_price = 3
+n_qubits_uncertainty = 2
+
+# =============================================================================
+# CORRELATION & COPULA MODELS
+# =============================================================================
+
+[correlation]
+method = "shrinkage"  # pearson, kendall, spearman, shrinkage
+shrinkage_target = "identity"  # identity, constant_correlation
+window = 252
+min_periods = 63
+handle_missing = "pairwise"  # pairwise, complete
+
+[copula]
+# Copula models (R-based)
+enabled = true
+family = "normal"  # normal, t, clayton, gumbel, frank
+fit_method = "mpl"  # mpl, ml, itau
+
+# =============================================================================
+# MODEL PERSISTENCE
+# =============================================================================
+
+[persistence]
+save_models = true
+model_path = "models"
+save_format = "joblib"  # joblib, pickle, onnx
+version_models = true
+max_model_versions = 5
+
+[persistence.checkpoints]
+enabled = true
+checkpoint_interval = 100
+checkpoint_path = "checkpoints"

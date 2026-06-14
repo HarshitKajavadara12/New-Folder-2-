@@ -1,0 +1,48 @@
+# =============================================================================
+# GIGA SYSTEM - Python Dependencies
+# Greek Intelligence for Global Analysis
+# Minimalist, High-Performance Quantitative Finance Platform
+# =============================================================================
+
+# Core Numerical Computing (Speed-focused)
+numpy==1.26.2                   # Vectorized operations, foundation of all math
+scipy==1.11.4                   # Scientific computing, optimization, statistics
+numba==0.58.1                   # JIT compilation (100x speedup for hot loops)
+sympy==1.12                     # Symbolic mathematics for derivations
+
+# Data Handling (Modern, Fast)
+polars==0.19.19                 # 10x faster than Pandas, Rust-based
+duckdb==0.9.2                   # 1000x faster than PostgreSQL for analytics
+pyarrow==14.0.1                 # Columnar data format, zero-copy
+
+# Options Pricing (Industry Standard)
+QuantLib==1.32                  # Battle-tested options pricing, calibration
+
+# Quantum Computing (Cutting Edge)
+qiskit==0.45.1                  # IBM Quantum SDK
+qiskit-aer==0.13.1              # High-performance quantum simulators
+qiskit-optimization==0.6.0      # Portfolio optimization on quantum
+
+# Backtesting (High Performance)
+vectorbt==0.26.0                # 100x faster than zipline, Numba-accelerated
+
+# Python-R Bridge
+rpy2==3.5.15                    # Seamless Python ↔ R integration
+
+# Visualization
+streamlit==1.29.0               # Web dashboards without React bloat
+plotly==5.18.0                  # Interactive 3D plots, WebGL-accelerated
+
+# Utilities
+toml==0.10.2                    # Configuration files (human-readable)
+python-dateutil==2.8.2          # Date handling for financial calendars
+loguru==0.7.2                   # Better logging with colors and rotation
+
+# Testing
+pytest==7.4.3                   # Testing framework
+pytest-benchmark==4.0.0         # Performance testing (ensure <1ms targets)
+
+# =============================================================================
+# Total: 18 packages (~500MB installed)
+# Philosophy: Only what's needed, nothing more
+# =============================================================================

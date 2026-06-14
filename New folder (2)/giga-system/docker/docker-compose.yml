@@ -1,0 +1,31 @@
+version: "3.8"
+
+services:
+  giga-research:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: giga-research
+    command: python run_system_pipeline.py --mode research
+    volumes:
+      - ../config:/app/config
+      - ../artifacts:/app/artifacts
+      - ../logs:/app/logs
+    environment:
+      - PYTHONPATH=/app
+      - MODE=research
+
+  giga-live:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: giga-live
+    command: python launch_giga_system.py
+    volumes:
+      - ../config:/app/config:ro
+      - ../logs:/app/logs
+    environment:
+      - PYTHONPATH=/app
+      - MODE=live
+    depends_on:
+      - giga-research

@@ -1,0 +1,224 @@
+2026-01-09 01:04:54,670 - [LIVE] - INFO -    Generated At: 2026-01-09T01:02:51.759030
+2026-01-09 01:04:54,670 - [LIVE] - INFO -    Target Kappa: 6.5289
+2026-01-09 01:06:25,919 - [LIVE] - INFO - [OK] Bridge Loaded. Source: demo_complete_system.py (Research Mode)
+2026-01-09 01:06:25,919 - [LIVE] - INFO -      Generated At: 2026-01-09T01:02:51.759030
+2026-01-09 01:06:25,920 - [LIVE] - INFO -      Target Kappa: 6.5289
+2026-01-09 01:06:25,920 - [LIVE] - INFO - [RISK] Global Risk Controller Active. Equity: $10,000.00
+2026-01-09 01:06:25,920 - [LIVE] - INFO - [EXEC] Executor Online. Slippage Limit: 5bps
+2026-01-09 01:06:25,934 - [LIVE] - INFO - [STRAT] LIVE MOMENTUM STRATEGY: MOUNTED
+2026-01-09 01:08:56,154 - [LIVE] - INFO - [OK] Bridge Loaded. Source: demo_complete_system.py (Research Mode)
+2026-01-09 01:08:56,154 - [LIVE] - INFO -      Generated At: 2026-01-09T01:02:51.759030
+2026-01-09 01:08:56,154 - [LIVE] - INFO -      Target Kappa: 6.5289
+2026-01-09 01:08:56,155 - [LIVE] - INFO - [RISK] Global Risk Controller Active. Equity: $10,000.00
+2026-01-09 01:08:56,155 - [LIVE] - INFO - [EXEC] Executor Online. Slippage Limit: 5bps
+2026-01-09 01:08:56,155 - [LIVE] - INFO - [STRAT] LIVE MOMENTUM STRATEGY: MOUNTED
+2026-01-09 01:08:56,584 - [LIVE] - INFO - [TICK] 91,325.04 | Eq: 10,000 | Lat: 0.01ms
+2026-01-09 01:08:56,805 - [LIVE] - INFO - [TICK] 91,325.04 | Eq: 10,000 | Lat: 0.01ms
+2026-01-09 01:08:57,019 - [LIVE] - INFO - [TICK] 91,325.03 | Eq: 10,000 | Lat: 0.00ms
+2026-01-09 01:08:57,233 - [LIVE] - INFO - [TICK] 91,325.03 | Eq: 10,000 | Lat: 0.00ms
+2026-01-09 01:08:57,447 - [LIVE] - INFO - [TICK] 91,325.03 | Eq: 10,000 | Lat: 0.00ms
+2026-01-09 01:08:57,662 - [LIVE] - INFO - [TICK] 91,325.04 | Eq: 10,000 | Lat: 0.01ms
+2026-01-09 01:08:57,886 - [LIVE] - INFO - [TICK] 91,325.04 | Eq: 10,000 | Lat: 0.00ms
+2026-01-09 01:08:58,102 - [LIVE] - INFO - [TICK] 91,325.04 | Eq: 10,000 | Lat: 0.00ms
+2026-01-09 01:08:58,326 - [LIVE] - INFO - [TICK] 91,325.04 | Eq: 10,000 | Lat: 0.00ms
+2026-01-09 01:08:58,541 - [LIVE] - INFO - [TICK] 91,325.04 | Eq: 10,000 | Lat: 0.00ms
+2026-01-09 01:08:58,755 - [LIVE] - INFO - [TICK] 91,325.04 | Eq: 10,000 | Lat: 0.00ms
+2026-01-09 01:08:58,971 - [LIVE] - INFO - [TICK] 91,325.03 | Eq: 10,000 | Lat: 0.01ms
+2026-01-09 01:08:59,186 - [LIVE] - INFO - [TICK] 91,325.04 | Eq: 10,000 | Lat: 0.00ms
+2026-01-09 01:08:59,400 - [LIVE] - INFO - [TICK] 91,325.04 | Eq: 10,000 | Lat: 0.01ms
+2026-01-09 01:08:59,615 - [LIVE] - INFO - [TICK] 91,325.04 | Eq: 10,000 | Lat: 0.01ms
+2026-01-09 01:08:59,832 - [LIVE] - INFO - [TICK] 91,325.04 | Eq: 10,000 | Lat: 0.01ms
+2026-01-09 01:09:00,055 - [LIVE] - INFO - [TICK] 91,325.04 | Eq: 10,000 | Lat: 0.01ms
+2026-01-09 01:09:00,484 - [LIVE] - INFO - [TICK] 91,325.04 | Eq: 10,000 | Lat: 0.01ms
+2026-01-09 01:09:00,716 - [LIVE] - INFO - [TICK] 91,325.04 | Eq: 10,000 | Lat: 0.04ms
+2026-01-09 01:09:00,940 - [LIVE] - INFO - [TICK] 91,325.04 | Eq: 10,000 | Lat: 0.01ms
+2026-01-09 01:09:01,156 - [LIVE] - INFO - [TICK] 91,325.04 | Eq: 10,000 | Lat: 0.03ms
+2026-01-09 01:09:01,372 - [LIVE] - INFO - [TICK] 91,325.04 | Eq: 10,000 | Lat: 0.01ms
+2026-01-09 01:09:01,587 - [LIVE] - INFO - [TICK] 91,325.04 | Eq: 10,000 | Lat: 0.02ms
+2026-01-09 01:09:01,802 - [LIVE] - INFO - [TICK] 91,325.03 | Eq: 10,000 | Lat: 0.01ms
+2026-01-09 01:09:02,016 - [LIVE] - INFO - [TICK] 91,325.03 | Eq: 10,000 | Lat: 0.01ms
+2026-01-09 01:09:02,439 - [LIVE] - INFO - [TICK] 91,325.04 | Eq: 10,000 | Lat: 0.01ms
+2026-01-09 01:09:02,660 - [LIVE] - INFO - [TICK] 91,325.04 | Eq: 10,000 | Lat: 0.01ms
+2026-01-09 01:09:02,876 - [LIVE] - INFO - [TICK] 91,325.04 | Eq: 10,000 | Lat: 0.01ms
+2026-01-09 01:09:03,089 - [LIVE] - INFO - [TICK] 91,325.04 | Eq: 10,000 | Lat: 0.01ms
+2026-01-09 01:09:03,513 - [LIVE] - INFO - [TICK] 91,325.04 | Eq: 10,000 | Lat: 0.01ms
+2026-01-09 01:09:03,728 - [LIVE] - INFO - [TICK] 91,325.04 | Eq: 10,000 | Lat: 0.01ms
+2026-01-09 01:09:03,944 - [LIVE] - INFO - [TICK] 91,325.03 | Eq: 10,000 | Lat: 0.01ms
+2026-01-09 01:09:04,159 - [LIVE] - INFO - [TICK] 91,325.03 | Eq: 10,000 | Lat: 0.01ms
+2026-01-09 01:09:04,381 - [LIVE] - INFO - [TICK] 91,325.03 | Eq: 10,000 | Lat: 0.01ms
+2026-01-09 01:09:04,805 - [LIVE] - INFO - [TICK] 91,325.03 | Eq: 10,000 | Lat: 0.01ms
+2026-01-09 01:09:05,019 - [LIVE] - INFO - [TICK] 91,325.03 | Eq: 10,000 | Lat: 0.01ms
+2026-01-09 01:09:05,444 - [LIVE] - INFO - [TICK] 91,313.95 | Eq: 10,000 | Lat: 0.01ms
+2026-01-09 01:09:05,868 - [LIVE] - INFO - [TICK] 91,312.26 | Eq: 10,000 | Lat: 0.01ms
+2026-01-09 01:09:06,291 - [LIVE] - INFO - [TICK] 91,312.26 | Eq: 10,000 | Lat: 0.01ms
+2026-01-09 01:09:06,507 - [LIVE] - INFO - [TICK] 91,312.26 | Eq: 10,000 | Lat: 0.01ms
+2026-01-09 01:09:06,932 - [LIVE] - INFO - [TICK] 91,307.03 | Eq: 10,000 | Lat: 0.01ms
+2026-01-09 01:09:07,356 - [LIVE] - INFO - [TICK] 91,307.03 | Eq: 10,000 | Lat: 0.01ms
+2026-01-09 01:09:07,599 - [LIVE] - INFO - [TICK] 91,307.03 | Eq: 10,000 | Lat: 0.01ms
+2026-01-09 01:12:35,423 - [LIVE] - INFO - [OK] Bridge Loaded. Source: demo_complete_system.py (Research Mode)
+2026-01-09 01:12:35,423 - [LIVE] - INFO -      Generated At: 2026-01-09T01:02:51.759030
+2026-01-09 01:12:35,423 - [LIVE] - INFO -      Target Kappa: 6.5289
+2026-01-09 01:12:35,423 - [LIVE] - INFO - [RISK] Global Risk Controller Active. Equity: $10,000.00
+2026-01-09 01:12:35,423 - [LIVE] - INFO - [EXEC] Executor Online. Slippage Limit: 5bps
+2026-01-09 01:12:35,423 - [LIVE] - INFO - [STRAT] LIVE MOMENTUM STRATEGY: MOUNTED
+2026-01-09 01:12:35,862 - [LIVE] - INFO - [TICK] 91,207.22 | Eq: 10,000 | Lat: 20.07ms
+2026-01-09 01:12:36,080 - [LIVE] - INFO - [TICK] 91,207.22 | Eq: 10,000 | Lat: 2.61ms
+2026-01-09 01:12:36,297 - [LIVE] - INFO - [TICK] 91,207.22 | Eq: 10,000 | Lat: 2.71ms
+2026-01-09 01:12:36,515 - [LIVE] - INFO - [TICK] 91,207.22 | Eq: 10,000 | Lat: 1.60ms
+2026-01-09 01:12:36,734 - [LIVE] - INFO - [TICK] 91,207.22 | Eq: 10,000 | Lat: 2.95ms
+2026-01-09 01:12:36,953 - [LIVE] - INFO - [TICK] 91,207.22 | Eq: 10,000 | Lat: 2.73ms
+2026-01-09 01:12:37,174 - [LIVE] - INFO - [TICK] 91,207.22 | Eq: 10,000 | Lat: 2.60ms
+2026-01-09 01:12:37,393 - [LIVE] - INFO - [TICK] 91,207.22 | Eq: 10,000 | Lat: 2.49ms
+2026-01-09 01:12:37,609 - [LIVE] - INFO - [TICK] 91,207.22 | Eq: 10,000 | Lat: 1.71ms
+2026-01-09 01:12:37,834 - [LIVE] - INFO - [TICK] 91,207.22 | Eq: 10,000 | Lat: 2.09ms
+2026-01-09 01:12:38,066 - [LIVE] - INFO - [TICK] 91,207.22 | Eq: 10,000 | Lat: 14.96ms
+2026-01-09 01:12:38,285 - [LIVE] - INFO - [TICK] 91,216.21 | Eq: 10,000 | Lat: 3.74ms
+2026-01-09 01:12:38,502 - [LIVE] - INFO - [TICK] 91,223.32 | Eq: 10,000 | Lat: 2.17ms
+2026-01-09 01:12:38,722 - [LIVE] - INFO - [TICK] 91,223.33 | Eq: 10,000 | Lat: 4.99ms
+2026-01-09 01:12:38,944 - [LIVE] - INFO - [SENSE] HOLD | Conf:0.1 | Reason:Choppy or Neutral
+2026-01-09 01:12:38,944 - [LIVE] - INFO - [TICK] 91,223.32 | Eq: 10,000 | Lat: 2.73ms
+2026-01-09 01:12:39,164 - [LIVE] - INFO - [SENSE] HOLD | Conf:0.1 | Reason:Choppy or Neutral
+2026-01-09 01:12:39,164 - [LIVE] - INFO - [TICK] 91,223.32 | Eq: 10,000 | Lat: 3.38ms
+2026-01-09 01:12:39,383 - [LIVE] - INFO - [SENSE] HOLD | Conf:0.1 | Reason:Choppy or Neutral
+2026-01-09 01:12:39,383 - [LIVE] - INFO - [TICK] 91,223.32 | Eq: 10,000 | Lat: 2.61ms
+2026-01-09 01:12:39,603 - [LIVE] - INFO - [SENSE] HOLD | Conf:0.1 | Reason:Choppy or Neutral
+2026-01-09 01:12:39,603 - [LIVE] - INFO - [TICK] 91,223.32 | Eq: 10,000 | Lat: 3.94ms
+2026-01-09 01:12:39,822 - [LIVE] - INFO - [SENSE] HOLD | Conf:0.1 | Reason:Choppy or Neutral
+2026-01-09 01:12:39,823 - [LIVE] - INFO - [TICK] 91,223.32 | Eq: 10,000 | Lat: 3.02ms
+2026-01-09 01:12:40,093 - [LIVE] - INFO - [SENSE] HOLD | Conf:0.1 | Reason:Choppy or Neutral
+2026-01-09 01:12:40,103 - [LIVE] - INFO - [TICK] 91,223.32 | Eq: 10,000 | Lat: 63.64ms
+2026-01-09 01:12:40,323 - [LIVE] - INFO - [SENSE] HOLD | Conf:0.1 | Reason:Choppy or Neutral
+2026-01-09 01:12:40,323 - [LIVE] - INFO - [TICK] 91,223.32 | Eq: 10,000 | Lat: 3.82ms
+2026-01-09 01:13:05,593 - [LIVE] - INFO - [OK] Bridge Loaded. Source: demo_complete_system.py (Research Mode)
+2026-01-09 01:13:05,593 - [LIVE] - INFO -      Generated At: 2026-01-09T01:02:51.759030
+2026-01-09 01:13:05,594 - [LIVE] - INFO -      Target Kappa: 6.5289
+2026-01-09 01:13:05,594 - [LIVE] - INFO - [RISK] Global Risk Controller Active. Equity: $10,000.00
+2026-01-09 01:13:05,594 - [LIVE] - INFO - [EXEC] Executor Online. Slippage Limit: 5bps
+2026-01-09 01:13:05,595 - [LIVE] - INFO - [STRAT] LIVE MOMENTUM STRATEGY: MOUNTED
+2026-01-09 01:13:06,009 - [LIVE] - INFO - [MATH] Price:91239.8 | D(Delta):0.00 | K(target):6.5289
+2026-01-09 01:13:06,010 - [LIVE] - INFO - [TICK] 91,239.75 | Eq: 10,000 | Lat: 0.46ms
+2026-01-09 01:13:06,224 - [LIVE] - INFO - [MATH] Price:91239.8 | D(Delta):0.00 | K(target):6.5289
+2026-01-09 01:13:06,224 - [LIVE] - INFO - [TICK] 91,239.75 | Eq: 10,000 | Lat: 0.40ms
+2026-01-09 01:13:06,438 - [LIVE] - INFO - [MATH] Price:91239.8 | D(Delta):0.00 | K(target):6.5289
+2026-01-09 01:13:06,438 - [LIVE] - INFO - [TICK] 91,239.75 | Eq: 10,000 | Lat: 0.53ms
+2026-01-09 01:13:06,651 - [LIVE] - INFO - [MATH] Price:91239.8 | D(Delta):0.00 | K(target):6.5289
+2026-01-09 01:13:06,652 - [LIVE] - INFO - [TICK] 91,239.75 | Eq: 10,000 | Lat: 0.37ms
+2026-01-09 01:13:06,871 - [LIVE] - INFO - [MATH] Price:91239.8 | D(Delta):0.00 | K(target):6.5289
+2026-01-09 01:13:06,872 - [LIVE] - INFO - [TICK] 91,239.75 | Eq: 10,000 | Lat: 0.84ms
+2026-01-09 01:13:07,086 - [LIVE] - INFO - [MATH] Price:91239.8 | D(Delta):0.00 | K(target):6.5289
+2026-01-09 01:13:07,087 - [LIVE] - INFO - [TICK] 91,239.75 | Eq: 10,000 | Lat: 0.47ms
+2026-01-09 01:13:07,300 - [LIVE] - INFO - [MATH] Price:91239.8 | D(Delta):0.00 | K(target):6.5289
+2026-01-09 01:13:07,301 - [LIVE] - INFO - [TICK] 91,239.75 | Eq: 10,000 | Lat: 0.38ms
+2026-01-09 01:13:07,516 - [LIVE] - INFO - [MATH] Price:91239.8 | D(Delta):0.00 | K(target):6.5289
+2026-01-09 01:13:07,516 - [LIVE] - INFO - [TICK] 91,239.75 | Eq: 10,000 | Lat: 0.39ms
+2026-01-09 01:13:07,732 - [LIVE] - INFO - [MATH] Price:91239.8 | D(Delta):0.00 | K(target):6.5289
+2026-01-09 01:13:07,733 - [LIVE] - INFO - [TICK] 91,239.75 | Eq: 10,000 | Lat: 0.42ms
+2026-01-09 01:13:07,947 - [LIVE] - INFO - [MATH] Price:91239.8 | D(Delta):0.00 | K(target):6.5289
+2026-01-09 01:13:07,947 - [LIVE] - INFO - [TICK] 91,239.75 | Eq: 10,000 | Lat: 0.42ms
+2026-01-09 01:13:08,163 - [LIVE] - INFO - [MATH] Price:91239.8 | D(Delta):nan | K(target):6.5289
+2026-01-09 01:13:08,164 - [LIVE] - INFO - [TICK] 91,239.75 | Eq: 10,000 | Lat: 2.78ms
+2026-01-09 01:13:08,380 - [LIVE] - INFO - [MATH] Price:91239.8 | D(Delta):nan | K(target):6.5289
+2026-01-09 01:13:08,380 - [LIVE] - INFO - [TICK] 91,239.75 | Eq: 10,000 | Lat: 1.21ms
+2026-01-09 01:13:08,594 - [LIVE] - INFO - [MATH] Price:91239.8 | D(Delta):nan | K(target):6.5289
+2026-01-09 01:13:08,594 - [LIVE] - INFO - [TICK] 91,239.75 | Eq: 10,000 | Lat: 1.15ms
+2026-01-09 01:13:08,811 - [LIVE] - INFO - [MATH] Price:91239.7 | D(Delta):1.00 | K(target):6.5289
+2026-01-09 01:13:08,812 - [LIVE] - INFO - [TICK] 91,239.74 | Eq: 10,000 | Lat: 1.14ms
+2026-01-09 01:13:09,026 - [LIVE] - INFO - [MATH] Price:91239.7 | D(Delta):1.00 | K(target):6.5289
+2026-01-09 01:13:09,027 - [LIVE] - INFO - [SENSE] ENTER_SHORT | Conf:0.75 | Reason:Death Cross + Momentum (91239.74)
+2026-01-09 01:13:09,027 - [LIVE] - INFO - [RISK] Validating Signal: SELL...
+2026-01-09 01:13:09,027 - [LIVE] - INFO - [RISK] APPROVED. Exp: 2.0x | Size: 0.0219 BTC
+2026-01-09 01:13:09,028 - [LIVE] - INFO - [EXEC] Sending Order -> BinanceExecutor...
+2026-01-09 01:13:10,143 - [LIVE] - INFO - [MATH] Price:91239.7 | D(Delta):1.00 | K(target):6.5289
+2026-01-09 01:13:10,144 - [LIVE] - INFO - [SENSE] HOLD | Conf:0.1 | Reason:Choppy or Neutral
+2026-01-09 01:13:10,144 - [LIVE] - INFO - [TICK] 91,239.74 | Eq: 10,000 | Lat: 1.45ms
+2026-01-09 01:13:10,571 - [LIVE] - INFO - [MATH] Price:91239.7 | D(Delta):1.00 | K(target):6.5289
+2026-01-09 01:13:10,572 - [LIVE] - INFO - [SENSE] HOLD | Conf:0.1 | Reason:Choppy or Neutral
+2026-01-09 01:13:10,572 - [LIVE] - INFO - [TICK] 91,239.74 | Eq: 10,000 | Lat: 1.25ms
+2026-01-09 01:13:10,786 - [LIVE] - INFO - [MATH] Price:91239.7 | D(Delta):1.00 | K(target):6.5289
+2026-01-09 01:13:10,787 - [LIVE] - INFO - [SENSE] HOLD | Conf:0.1 | Reason:Choppy or Neutral
+2026-01-09 01:13:10,787 - [LIVE] - INFO - [TICK] 91,239.74 | Eq: 10,000 | Lat: 1.56ms
+2026-01-09 01:13:11,004 - [LIVE] - INFO - [MATH] Price:91239.7 | D(Delta):1.00 | K(target):6.5289
+2026-01-09 01:13:11,004 - [LIVE] - INFO - [SENSE] HOLD | Conf:0.1 | Reason:Choppy or Neutral
+2026-01-09 01:13:11,004 - [LIVE] - INFO - [TICK] 91,239.74 | Eq: 10,000 | Lat: 1.40ms
+2026-01-09 01:13:11,221 - [LIVE] - INFO - [MATH] Price:91239.7 | D(Delta):1.00 | K(target):6.5289
+2026-01-09 01:13:11,221 - [LIVE] - INFO - [SENSE] HOLD | Conf:0.1 | Reason:Choppy or Neutral
+2026-01-09 01:13:11,222 - [LIVE] - INFO - [TICK] 91,239.74 | Eq: 10,000 | Lat: 2.12ms
+2026-01-09 01:13:11,438 - [LIVE] - INFO - [MATH] Price:91239.7 | D(Delta):1.00 | K(target):6.5289
+2026-01-09 01:13:11,447 - [LIVE] - INFO - [SENSE] HOLD | Conf:0.1 | Reason:Choppy or Neutral
+2026-01-09 01:13:11,448 - [LIVE] - INFO - [TICK] 91,239.74 | Eq: 10,000 | Lat: 10.92ms
+2026-01-09 01:13:11,665 - [LIVE] - INFO - [MATH] Price:91239.7 | D(Delta):1.00 | K(target):6.5289
+2026-01-09 01:13:11,665 - [LIVE] - INFO - [SENSE] HOLD | Conf:0.1 | Reason:Choppy or Neutral
+2026-01-09 01:13:11,666 - [LIVE] - INFO - [TICK] 91,239.74 | Eq: 10,000 | Lat: 1.42ms
+2026-01-09 01:13:11,884 - [LIVE] - INFO - [MATH] Price:91239.7 | D(Delta):1.00 | K(target):6.5289
+2026-01-09 01:13:11,884 - [LIVE] - INFO - [SENSE] HOLD | Conf:0.1 | Reason:Choppy or Neutral
+2026-01-09 01:13:11,885 - [LIVE] - INFO - [TICK] 91,239.74 | Eq: 10,000 | Lat: 1.40ms
+2026-01-09 01:13:12,103 - [LIVE] - INFO - [MATH] Price:91239.7 | D(Delta):1.00 | K(target):6.5289
+2026-01-09 01:13:12,103 - [LIVE] - INFO - [SENSE] HOLD | Conf:0.1 | Reason:Choppy or Neutral
+2026-01-09 01:13:12,104 - [LIVE] - INFO - [TICK] 91,239.74 | Eq: 10,000 | Lat: 2.08ms
+2026-01-09 01:13:12,332 - [LIVE] - INFO - [MATH] Price:91239.7 | D(Delta):1.00 | K(target):6.5289
+2026-01-09 01:13:12,332 - [LIVE] - INFO - [SENSE] HOLD | Conf:0.1 | Reason:Choppy or Neutral
+2026-01-09 01:13:12,333 - [LIVE] - INFO - [TICK] 91,239.74 | Eq: 10,000 | Lat: 1.42ms
+2026-01-09 01:13:12,566 - [LIVE] - INFO - [MATH] Price:91239.7 | D(Delta):1.00 | K(target):6.5289
+2026-01-09 01:13:12,567 - [LIVE] - INFO - [SENSE] HOLD | Conf:0.1 | Reason:Choppy or Neutral
+2026-01-09 01:13:12,567 - [LIVE] - INFO - [TICK] 91,239.74 | Eq: 10,000 | Lat: 1.33ms
+2026-01-09 01:13:12,783 - [LIVE] - INFO - [MATH] Price:91239.7 | D(Delta):1.00 | K(target):6.5289
+2026-01-09 01:13:12,784 - [LIVE] - INFO - [SENSE] HOLD | Conf:0.1 | Reason:Choppy or Neutral
+2026-01-09 01:13:12,784 - [LIVE] - INFO - [TICK] 91,239.74 | Eq: 10,000 | Lat: 1.44ms
+2026-01-09 01:13:13,000 - [LIVE] - INFO - [MATH] Price:91239.7 | D(Delta):1.00 | K(target):6.5289
+2026-01-09 01:13:13,001 - [LIVE] - INFO - [SENSE] HOLD | Conf:0.1 | Reason:Choppy or Neutral
+2026-01-09 01:13:13,001 - [LIVE] - INFO - [TICK] 91,239.74 | Eq: 10,000 | Lat: 1.31ms
+2026-01-09 01:13:13,215 - [LIVE] - INFO - [MATH] Price:91239.7 | D(Delta):1.00 | K(target):6.5289
+2026-01-09 01:13:13,216 - [LIVE] - INFO - [SENSE] HOLD | Conf:0.1 | Reason:Choppy or Neutral
+2026-01-09 01:13:13,216 - [LIVE] - INFO - [TICK] 91,239.74 | Eq: 10,000 | Lat: 1.39ms
+2026-01-09 01:13:13,642 - [LIVE] - INFO - [MATH] Price:91239.7 | D(Delta):1.00 | K(target):6.5289
+2026-01-09 01:13:13,643 - [LIVE] - INFO - [SENSE] HOLD | Conf:0.1 | Reason:Choppy or Neutral
+2026-01-09 01:13:13,643 - [LIVE] - INFO - [TICK] 91,239.74 | Eq: 10,000 | Lat: 1.61ms
+2026-01-09 01:13:13,862 - [LIVE] - INFO - [MATH] Price:91239.7 | D(Delta):1.00 | K(target):6.5289
+2026-01-09 01:13:13,863 - [LIVE] - INFO - [SENSE] HOLD | Conf:0.1 | Reason:Choppy or Neutral
+2026-01-09 01:13:13,863 - [LIVE] - INFO - [TICK] 91,239.74 | Eq: 10,000 | Lat: 1.44ms
+2026-01-09 01:13:14,286 - [LIVE] - INFO - [MATH] Price:91239.7 | D(Delta):1.00 | K(target):6.5289
+2026-01-09 01:13:14,287 - [LIVE] - INFO - [SENSE] HOLD | Conf:0.1 | Reason:Choppy or Neutral
+2026-01-09 01:13:14,287 - [LIVE] - INFO - [TICK] 91,239.74 | Eq: 10,000 | Lat: 1.54ms
+2026-01-09 01:13:14,503 - [LIVE] - INFO - [MATH] Price:91236.0 | D(Delta):1.00 | K(target):6.5289
+2026-01-09 01:13:14,504 - [LIVE] - INFO - [SENSE] ENTER_SHORT | Conf:0.75 | Reason:Death Cross + Momentum (91235.99)
+2026-01-09 01:13:14,504 - [LIVE] - INFO - [RISK] Validating Signal: SELL...
+2026-01-09 01:13:14,504 - [LIVE] - INFO - [RISK] APPROVED. Exp: 2.0x | Size: 0.0219 BTC
+2026-01-09 01:13:14,505 - [LIVE] - INFO - [EXEC] Sending Order -> BinanceExecutor...
+2026-01-09 01:13:15,641 - [LIVE] - INFO - [MATH] Price:91232.9 | D(Delta):1.00 | K(target):6.5289
+2026-01-09 01:13:15,642 - [LIVE] - INFO - [SENSE] ENTER_SHORT | Conf:0.75 | Reason:Death Cross + Momentum (91232.88)
+2026-01-09 01:13:15,642 - [LIVE] - INFO - [RISK] Validating Signal: SELL...
+2026-01-09 01:13:15,642 - [LIVE] - INFO - [RISK] APPROVED. Exp: 2.0x | Size: 0.0219 BTC
+2026-01-09 01:13:15,642 - [LIVE] - INFO - [EXEC] Sending Order -> BinanceExecutor...
+2026-01-09 01:13:16,757 - [LIVE] - INFO - [MATH] Price:91232.9 | D(Delta):1.00 | K(target):6.5289
+2026-01-09 01:13:16,758 - [LIVE] - INFO - [SENSE] ENTER_SHORT | Conf:0.75 | Reason:Death Cross + Momentum (91232.88)
+2026-01-09 01:13:16,758 - [LIVE] - INFO - [RISK] Validating Signal: SELL...
+2026-01-09 01:13:16,758 - [LIVE] - INFO - [RISK] APPROVED. Exp: 2.0x | Size: 0.0219 BTC
+2026-01-09 01:13:16,759 - [LIVE] - INFO - [EXEC] Sending Order -> BinanceExecutor...
+2026-01-09 01:13:17,876 - [LIVE] - INFO - [MATH] Price:91232.9 | D(Delta):1.00 | K(target):6.5289
+2026-01-09 01:13:17,876 - [LIVE] - INFO - [SENSE] HOLD | Conf:0.1 | Reason:Choppy or Neutral
+2026-01-09 01:13:17,877 - [LIVE] - INFO - [TICK] 91,232.88 | Eq: 10,000 | Lat: 2.23ms
+2026-01-09 01:13:18,096 - [LIVE] - INFO - [MATH] Price:91232.9 | D(Delta):1.00 | K(target):6.5289
+2026-01-09 01:13:18,097 - [LIVE] - INFO - [SENSE] HOLD | Conf:0.1 | Reason:Choppy or Neutral
+2026-01-09 01:13:18,097 - [LIVE] - INFO - [TICK] 91,232.88 | Eq: 10,000 | Lat: 1.36ms
+2026-01-09 01:13:18,312 - [LIVE] - INFO - [MATH] Price:91232.9 | D(Delta):1.00 | K(target):6.5289
+2026-01-09 01:13:18,312 - [LIVE] - INFO - [SENSE] HOLD | Conf:0.1 | Reason:Choppy or Neutral
+2026-01-09 01:13:18,312 - [LIVE] - INFO - [TICK] 91,232.88 | Eq: 10,000 | Lat: 1.18ms
+2026-01-09 01:13:18,528 - [LIVE] - INFO - [MATH] Price:91232.9 | D(Delta):1.00 | K(target):6.5289
+2026-01-09 01:13:18,529 - [LIVE] - INFO - [SENSE] HOLD | Conf:0.1 | Reason:Choppy or Neutral
+2026-01-09 01:13:18,529 - [LIVE] - INFO - [TICK] 91,232.88 | Eq: 10,000 | Lat: 1.44ms
+2026-01-09 01:13:18,743 - [LIVE] - INFO - [MATH] Price:91232.9 | D(Delta):1.00 | K(target):6.5289
+2026-01-09 01:13:18,744 - [LIVE] - INFO - [SENSE] HOLD | Conf:0.1 | Reason:Choppy or Neutral
+2026-01-09 01:13:18,744 - [LIVE] - INFO - [TICK] 91,232.89 | Eq: 10,000 | Lat: 1.40ms
+2026-01-09 01:13:18,959 - [LIVE] - INFO - [MATH] Price:91232.9 | D(Delta):1.00 | K(target):6.5289
+2026-01-09 01:13:18,959 - [LIVE] - INFO - [SENSE] HOLD | Conf:0.1 | Reason:Choppy or Neutral
+2026-01-09 01:13:18,960 - [LIVE] - INFO - [TICK] 91,232.89 | Eq: 10,000 | Lat: 1.59ms
+2026-01-09 01:13:19,175 - [LIVE] - INFO - [MATH] Price:91232.9 | D(Delta):1.00 | K(target):6.5289
+2026-01-09 01:13:19,175 - [LIVE] - INFO - [SENSE] ENTER_SHORT | Conf:0.75 | Reason:Death Cross + Momentum (91232.88)
+2026-01-09 01:13:19,175 - [LIVE] - INFO - [RISK] Validating Signal: SELL...
+2026-01-09 01:13:19,175 - [LIVE] - INFO - [RISK] APPROVED. Exp: 2.0x | Size: 0.0219 BTC
+2026-01-09 01:13:19,176 - [LIVE] - INFO - [EXEC] Sending Order -> BinanceExecutor...
+2026-01-09 01:13:20,293 - [LIVE] - INFO - [MATH] Price:91232.9 | D(Delta):1.00 | K(target):6.5289
+2026-01-09 01:13:20,294 - [LIVE] - INFO - [SENSE] ENTER_SHORT | Conf:0.75 | Reason:Death Cross + Momentum (91232.88)
+2026-01-09 01:13:20,294 - [LIVE] - INFO - [RISK] Validating Signal: SELL...
+2026-01-09 01:13:20,294 - [LIVE] - INFO - [RISK] APPROVED. Exp: 2.0x | Size: 0.0219 BTC
+2026-01-09 01:13:20,295 - [LIVE] - INFO - [EXEC] Sending Order -> BinanceExecutor...

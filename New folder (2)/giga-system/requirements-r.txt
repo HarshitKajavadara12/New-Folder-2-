@@ -1,0 +1,48 @@
+# =============================================================================
+# GIGA SYSTEM - R Package Dependencies
+# Statistical Analysis & Econometrics
+# =============================================================================
+
+# Time Series Analysis
+forecast                        # ARIMA, exponential smoothing, auto.arima
+rugarch                         # GARCH models (20+ variants) - gold standard
+vars                            # Vector AutoRegression for multivariate
+urca                            # Unit root tests, Johansen cointegration
+
+# Financial Analytics
+PerformanceAnalytics           # Sharpe, Sortino, drawdowns (100+ metrics)
+quantmod                       # Financial data, getSymbols, chartSeries
+TTR                            # Technical Trading Rules, indicators
+
+# Risk Modeling
+MASS                           # Multivariate statistics, robust methods
+copula                         # 30+ copula families for tail dependence
+evd                            # Extreme Value Distributions (black swans)
+
+# Portfolio Optimization
+PortfolioAnalytics            # Mean-variance, risk parity, Black-Litterman
+NMOF                          # Numerical Methods for Optimization in Finance
+
+# Econometrics
+dynlm                         # Dynamic linear models
+lmtest                        # Linear model testing (heteroskedasticity)
+sandwich                      # Robust covariance matrix estimators
+
+# Machine Learning / Regime Detection
+depmixS4                      # Hidden Markov Models for regime switching
+mclust                        # Model-based clustering
+
+# Visualization
+ggplot2                       # Publication-quality statistical plots
+plotly                        # Interactive plots (R version)
+
+# =============================================================================
+# Installation Script (run in R):
+# install.packages(c("forecast", "rugarch", "vars", "urca", 
+#                    "PerformanceAnalytics", "quantmod", "TTR",
+#                    "MASS", "copula", "evd", "PortfolioAnalytics",
+#                    "NMOF", "dynlm", "lmtest", "sandwich",
+#                    "depmixS4", "mclust", "ggplot2", "plotly"))
+# =============================================================================
+# Total: ~200MB installed
+# =============================================================================

@@ -1,0 +1,48 @@
+{"timestamp": "2026-01-08T18:55:15.870174", "type": "signal", "signal": "HOLD", "symbol": "BTC-2026", "size": 0, "confidence": 0.14583333333333331}
+{"timestamp": "2026-01-08T18:55:15.872170", "type": "signal", "signal": "BUY_CALL", "symbol": "BTC-2026", "size": 0, "confidence": 0.3499999999999999}
+{"timestamp": "2026-01-08T18:55:15.873170", "type": "execution", "action": "BUY_CALL", "price": 45100.0, "size": 0, "pnl": 500.0, "latency_ms": 1.0416000004624948}
+{"timestamp": "2026-01-08T19:00:05.998149", "type": "signal", "signal": "HOLD", "symbol": "BTC-2026", "size": 0, "confidence": 0.14583333333333331}
+{"timestamp": "2026-01-08T19:00:06.000149", "type": "signal", "signal": "BUY_CALL", "symbol": "BTC-2026", "size": 0, "confidence": 0.3499999999999999}
+{"timestamp": "2026-01-08T19:00:06.014604", "type": "execution", "action": "BUY_CALL", "price": 45100.0, "size": 0, "pnl": 500.0, "latency_ms": 14.857300004223362}
+{"timestamp": "2026-01-08T19:06:34.633106", "type": "execution", "action": "EXECUTE", "price": 45000.0, "size": 1, "pnl": 0.0, "latency_ms": 15.0}
+{"timestamp": "2026-01-08T19:06:55.811639", "type": "execution", "action": "EXECUTE", "price": 45000.0, "size": 1, "pnl": 0.0, "latency_ms": 15.0}
+{"timestamp": "2026-01-08T19:06:55.812639", "type": "execution", "action": "EXECUTE", "price": 45100.0, "size": 1, "pnl": 100.0, "latency_ms": 15.0}
+{"timestamp": "2026-01-08T19:50:33.144026", "type": "execution", "action": "EXECUTE", "price": 45000.0, "size": 1, "pnl": 0.0, "latency_ms": 15.0}
+{"timestamp": "2026-01-08T19:50:33.145025", "type": "execution", "action": "EXECUTE", "price": 45100.0, "size": 1, "pnl": 100.0, "latency_ms": 15.0}
+{"timestamp": "2026-01-08T20:00:55.661146", "type": "execution", "action": "EXECUTE", "price": 45000.0, "size": 1, "pnl": 0.0, "latency_ms": 12.5}
+{"timestamp": "2026-01-08T20:00:55.663147", "type": "execution", "action": "EXECUTE", "price": 45100.0, "size": 1, "pnl": 100.0, "latency_ms": 12.5}
+{"timestamp": "2026-01-08T20:05:57.411867", "type": "execution", "action": "EXECUTE", "price": 45000.874758603, "size": 1, "pnl": 0.0, "latency_ms": 0.0}
+{"timestamp": "2026-01-08T20:05:57.412862", "type": "execution", "action": "EXECUTE", "price": 44997.88911934331, "size": 1, "pnl": 0.0, "latency_ms": 0.0}
+{"timestamp": "2026-01-08T20:05:57.414864", "type": "execution", "action": "EXECUTE", "price": 45000.043454074024, "size": 1, "pnl": 0.0, "latency_ms": 0.9999275207519531}
+{"timestamp": "2026-01-08T20:05:57.416863", "type": "execution", "action": "EXECUTE", "price": 45002.74370860306, "size": 1, "pnl": 0.0, "latency_ms": 0.0}
+{"timestamp": "2026-01-08T20:05:57.418862", "type": "execution", "action": "EXECUTE", "price": 44997.14254782943, "size": 1, "pnl": 0.0, "latency_ms": 0.9973049163818359}
+{"timestamp": "2026-01-08T20:05:57.419864", "type": "execution", "action": "EXECUTE", "price": 44993.40453753183, "size": 1, "pnl": 0.0, "latency_ms": 0.0}
+{"timestamp": "2026-01-08T20:05:57.420863", "type": "execution", "action": "EXECUTE", "price": 44993.771449599044, "size": 1, "pnl": 0.0, "latency_ms": 0.0}
+{"timestamp": "2026-01-08T20:05:57.422869", "type": "execution", "action": "EXECUTE", "price": 44992.86365477492, "size": 1, "pnl": 0.0, "latency_ms": 0.0}
+{"timestamp": "2026-01-08T20:05:57.424862", "type": "execution", "action": "EXECUTE", "price": 44992.815383129506, "size": 1, "pnl": 0.0, "latency_ms": 0.99945068359375}
+{"timestamp": "2026-01-08T20:05:57.425863", "type": "execution", "action": "EXECUTE", "price": 44990.36683700566, "size": 1, "pnl": 0.0, "latency_ms": 0.0}
+{"timestamp": "2026-01-08T20:05:57.426863", "type": "execution", "action": "EXECUTE", "price": 44992.89093797106, "size": 1, "pnl": 0.0, "latency_ms": 0.0}
+{"timestamp": "2026-01-08T20:05:57.428863", "type": "execution", "action": "EXECUTE", "price": 44995.12351589291, "size": 1, "pnl": 0.0, "latency_ms": 1.0018348693847656}
+{"timestamp": "2026-01-08T20:05:57.430865", "type": "execution", "action": "EXECUTE", "price": 44995.31301394808, "size": 1, "pnl": 0.0, "latency_ms": 1.0008811950683594}
+{"timestamp": "2026-01-08T20:05:57.433876", "type": "execution", "action": "EXECUTE", "price": 44998.548883655894, "size": 1, "pnl": 0.0, "latency_ms": 0.0}
+{"timestamp": "2026-01-08T20:05:57.434865", "type": "execution", "action": "EXECUTE", "price": 44999.890962049016, "size": 1, "pnl": 0.0, "latency_ms": 0.0}
+{"timestamp": "2026-01-08T20:05:57.436868", "type": "execution", "action": "EXECUTE", "price": 44997.42409330539, "size": 1, "pnl": 0.0, "latency_ms": 0.0}
+{"timestamp": "2026-01-08T20:05:57.437863", "type": "execution", "action": "EXECUTE", "price": 44998.482626181496, "size": 1, "pnl": 0.0, "latency_ms": 0.0}
+{"timestamp": "2026-01-08T20:05:57.439864", "type": "execution", "action": "EXECUTE", "price": 44995.72995288873, "size": 1, "pnl": 0.0, "latency_ms": 0.0}
+{"timestamp": "2026-01-08T20:05:57.441867", "type": "execution", "action": "EXECUTE", "price": 44998.25163422232, "size": 1, "pnl": 0.0, "latency_ms": 0.9903907775878906}
+{"timestamp": "2026-01-08T20:05:57.442865", "type": "execution", "action": "EXECUTE", "price": 44998.108264618895, "size": 1, "pnl": 0.0, "latency_ms": 0.0}
+{"timestamp": "2026-01-08T20:12:26.370789", "type": "execution", "action": "EXECUTE", "price": 89575.1640625, "size": 1, "pnl": 0.0, "latency_ms": 1.0001659393310547}
+{"timestamp": "2026-01-08T20:12:28.373126", "type": "execution", "action": "EXECUTE", "price": 89575.1640625, "size": 1, "pnl": 0.0, "latency_ms": 0.5123615264892578}
+{"timestamp": "2026-01-08T20:12:30.375056", "type": "execution", "action": "EXECUTE", "price": 89575.1640625, "size": 1, "pnl": 0.0, "latency_ms": 0.0}
+{"timestamp": "2026-01-08T20:12:32.378225", "type": "execution", "action": "EXECUTE", "price": 89575.1640625, "size": 1, "pnl": 0.0, "latency_ms": 0.0}
+{"timestamp": "2026-01-08T20:12:34.380878", "type": "execution", "action": "EXECUTE", "price": 89575.1640625, "size": 1, "pnl": 0.0, "latency_ms": 0.0}
+{"timestamp": "2026-01-08T20:12:36.383567", "type": "execution", "action": "EXECUTE", "price": 89575.1640625, "size": 1, "pnl": 0.0, "latency_ms": 0.0}
+{"timestamp": "2026-01-08T20:12:38.385937", "type": "execution", "action": "EXECUTE", "price": 89575.1640625, "size": 1, "pnl": 0.0, "latency_ms": 0.0}
+{"timestamp": "2026-01-08T20:12:40.389401", "type": "execution", "action": "EXECUTE", "price": 89575.1640625, "size": 1, "pnl": 0.0, "latency_ms": 0.0}
+{"timestamp": "2026-01-08T20:12:42.392749", "type": "execution", "action": "EXECUTE", "price": 89575.1640625, "size": 1, "pnl": 0.0, "latency_ms": 0.5159378051757812}
+{"timestamp": "2026-01-08T20:12:44.395086", "type": "execution", "action": "EXECUTE", "price": 89575.1640625, "size": 1, "pnl": 0.0, "latency_ms": 0.0}
+{"timestamp": "2026-01-08T20:12:46.398080", "type": "execution", "action": "EXECUTE", "price": 89575.1640625, "size": 1, "pnl": 0.0, "latency_ms": 0.0}
+{"timestamp": "2026-01-08T20:12:48.400022", "type": "execution", "action": "EXECUTE", "price": 89575.1640625, "size": 1, "pnl": 0.0, "latency_ms": 0.0}
+{"timestamp": "2026-01-08T20:12:50.402790", "type": "execution", "action": "EXECUTE", "price": 89575.1640625, "size": 1, "pnl": 0.0, "latency_ms": 0.0}
+{"timestamp": "2026-01-08T20:12:52.404620", "type": "execution", "action": "EXECUTE", "price": 89575.1640625, "size": 1, "pnl": 0.0, "latency_ms": 0.0}
+{"timestamp": "2026-01-08T20:12:54.406915", "type": "execution", "action": "EXECUTE", "price": 89575.1640625, "size": 1, "pnl": 0.0, "latency_ms": 0.0}

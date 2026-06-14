@@ -1,0 +1,180 @@
+# GIGA SYSTEM - Database Configuration
+# =====================================
+# DuckDB and data storage configuration
+
+[duckdb]
+# Main DuckDB configuration
+database_path = "data/giga_system.duckdb"
+read_only = false
+threads = 8
+memory_limit = "8GB"
+max_memory = "12GB"
+
+# Query optimization
+enable_object_cache = true
+enable_progress_bar = false
+explain_output = false
+
+# Extensions
+extensions = [
+    "parquet",
+    "json",
+    "httpfs",
+    "icu"
+]
+
+[duckdb.settings]
+# DuckDB-specific settings
+temp_directory = ".duckdb_temp"
+default_null_order = "NULLS_LAST"
+default_order = "ASC"
+enable_http_metadata_cache = true
+http_timeout = 30000
+s3_region = "us-east-1"
+
+[tables]
+# Table definitions for market data
+
+[tables.ticks]
+name = "ticks"
+schema = """
+    symbol VARCHAR NOT NULL,
+    timestamp TIMESTAMP NOT NULL,
+    bid DOUBLE NOT NULL,
+    ask DOUBLE NOT NULL,
+    bid_size DOUBLE,
+    ask_size DOUBLE,
+    PRIMARY KEY (symbol, timestamp)
+"""
+partition_by = "YEAR(timestamp), MONTH(timestamp)"
+
+[tables.ohlcv]
+name = "ohlcv"
+schema = """
+    symbol VARCHAR NOT NULL,
+    timestamp TIMESTAMP NOT NULL,
+    open DOUBLE NOT NULL,
+    high DOUBLE NOT NULL,
+    low DOUBLE NOT NULL,
+    close DOUBLE NOT NULL,
+    volume DOUBLE NOT NULL,
+    vwap DOUBLE,
+    PRIMARY KEY (symbol, timestamp)
+"""
+partition_by = "YEAR(timestamp)"
+
+[tables.options_chain]
+name = "options_chain"
+schema = """
+    underlying VARCHAR NOT NULL,
+    expiry DATE NOT NULL,
+    strike DOUBLE NOT NULL,
+    option_type VARCHAR NOT NULL,
+    timestamp TIMESTAMP NOT NULL,
+    bid DOUBLE,
+    ask DOUBLE,
+    last DOUBLE,
+    volume INTEGER,
+    open_interest INTEGER,
+    implied_vol DOUBLE,
+    delta DOUBLE,
+    gamma DOUBLE,
+    theta DOUBLE,
+    vega DOUBLE,
+    PRIMARY KEY (underlying, expiry, strike, option_type, timestamp)
+"""
+
+[tables.trades]
+name = "trades"
+schema = """
+    trade_id VARCHAR PRIMARY KEY,
+    timestamp TIMESTAMP NOT NULL,
+    symbol VARCHAR NOT NULL,
+    side VARCHAR NOT NULL,
+    quantity DOUBLE NOT NULL,
+    price DOUBLE NOT NULL,
+    commission DOUBLE DEFAULT 0,
+    strategy VARCHAR,
+    pnl DOUBLE
+"""
+
+[tables.positions]
+name = "positions"
+schema = """
+    symbol VARCHAR PRIMARY KEY,
+    quantity DOUBLE NOT NULL,
+    avg_cost DOUBLE NOT NULL,
+    current_price DOUBLE,
+    unrealized_pnl DOUBLE,
+    realized_pnl DOUBLE,
+    last_updated TIMESTAMP
+"""
+
+[tables.risk_metrics]
+name = "risk_metrics"
+schema = """
+    timestamp TIMESTAMP NOT NULL,
+    portfolio_value DOUBLE NOT NULL,
+    var_95 DOUBLE,
+    var_99 DOUBLE,
+    cvar_95 DOUBLE,
+    cvar_99 DOUBLE,
+    max_drawdown DOUBLE,
+    sharpe_ratio DOUBLE,
+    sortino_ratio DOUBLE,
+    beta DOUBLE,
+    alpha DOUBLE,
+    PRIMARY KEY (timestamp)
+"""
+
+[cache]
+# Cache configuration
+enabled = true
+backend = "duckdb"  # duckdb, redis, memory
+ttl_seconds = 3600
+max_entries = 10000
+
+[cache.redis]
+# Redis cache settings (if backend = "redis")
+host = "localhost"
+port = 6379
+db = 0
+password = ""
+
+[backup]
+# Backup configuration
+enabled = true
+backup_path = "backups"
+backup_interval_hours = 24
+max_backups = 7
+compress = true
+
+[data_sources]
+# External data source configurations
+
+[data_sources.yahoo]
+enabled = true
+rate_limit_per_minute = 60
+cache_responses = true
+
+[data_sources.alpha_vantage]
+enabled = false
+api_key = ""
+rate_limit_per_minute = 5
+
+[data_sources.polygon]
+enabled = false
+api_key = ""
+rate_limit_per_minute = 100
+
+[data_sources.ib]
+# Interactive Brokers
+enabled = false
+host = "127.0.0.1"
+port = 7497
+client_id = 1
+
+[data_sources.csv]
+enabled = true
+default_path = "data/csv"
+datetime_format = "%Y-%m-%d %H:%M:%S"

@@ -1,0 +1,94 @@
+# GIGA SYSTEM - System Configuration
+# ===================================
+# Master configuration for the quantitative finance platform
+
+[system]
+name = "GIGA System"
+version = "1.0.0"
+environment = "development"  # development, staging, production
+debug = true
+log_level = "INFO"  # DEBUG, INFO, WARNING, ERROR, CRITICAL
+
+[performance]
+# Thread pool configuration
+max_workers = 8
+use_numba_jit = true
+use_parallel = true
+
+# Memory management
+max_memory_gb = 16
+cache_size_mb = 512
+enable_memory_profiling = false
+
+# Computation precision
+float_precision = "float64"  # float32, float64
+decimal_places = 8
+
+[paths]
+# Directory paths (relative to project root)
+data_dir = "data"
+cache_dir = ".cache"
+logs_dir = "logs"
+output_dir = "output"
+models_dir = "models"
+temp_dir = "temp"
+
+[logging]
+enabled = true
+log_to_file = true
+log_to_console = true
+log_format = "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+max_file_size_mb = 100
+backup_count = 5
+log_performance_metrics = true
+
+[monitoring]
+# System monitoring
+enable_metrics = true
+metrics_port = 9090
+health_check_interval_seconds = 60
+alert_on_error = true
+
+# Performance tracking
+track_execution_time = true
+track_memory_usage = true
+slow_query_threshold_ms = 1000
+
+[api]
+# API configuration
+host = "0.0.0.0"
+port = 8000
+workers = 4
+timeout_seconds = 60
+cors_origins = ["*"]
+rate_limit_per_minute = 100
+
+[security]
+# Security settings
+require_authentication = false
+api_key_header = "X-API-Key"
+enable_ssl = false
+ssl_cert_path = ""
+ssl_key_path = ""
+
+[features]
+# Feature flags
+enable_quantum = true
+enable_ml = true
+enable_r_bridge = true
+enable_backtesting = true
+enable_live_trading = false  # CAUTION: Enable only in production
+
+[defaults]
+# Default calculation parameters
+risk_free_rate = 0.05
+trading_days_per_year = 252
+default_volatility = 0.20
+default_time_horizon_days = 30
+
+[notifications]
+# Notification settings
+enable_email = false
+enable_slack = false
+email_recipients = []
+slack_webhook_url = ""

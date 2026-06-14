@@ -1,0 +1,71 @@
+MIT License
+
+Copyright (c) 2024 GIGA SYSTEM Contributors
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+Additional Notices:
+
+This software incorporates components from the following projects:
+
+1. NumPy - BSD License
+   Copyright (c) 2005-2024, NumPy Developers.
+
+2. SciPy - BSD License
+   Copyright (c) 2001-2024, SciPy Developers.
+
+3. QuantLib - BSD License
+   Copyright (c) 2000-2024, QuantLib Group.
+
+4. Qiskit - Apache License 2.0
+   Copyright (c) 2017-2024, IBM Research.
+
+5. R Project - GPL-2/GPL-3
+   Copyright (c) 1999-2024, R Foundation for Statistical Computing.
+
+6. rugarch - GPL-3
+   Copyright (c) 2013-2024, Alexios Galanos.
+
+7. Polars - MIT License
+   Copyright (c) 2020-2024, Polars Contributors.
+
+8. DuckDB - MIT License
+   Copyright (c) 2018-2024, DuckDB Foundation.
+
+---
+
+Disclaimer:
+
+This software is provided for educational and research purposes. It is NOT
+intended as financial advice or as a production-ready trading system. Users
+are responsible for:
+
+1. Validating all calculations independently
+2. Understanding the risks of algorithmic trading
+3. Compliance with applicable regulations
+4. Any financial losses incurred through use
+
+The authors and contributors make no guarantees about the accuracy,
+completeness, or fitness for any particular purpose of this software.
+
+Trading financial instruments involves substantial risk of loss. Past
+performance is not indicative of future results. Users should consult
+with qualified financial professionals before making investment decisions.

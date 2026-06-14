@@ -1,0 +1,374 @@
+════════════════════════════════════════════════════════════════════════════════
+  GIGA – Institutional Quantitative Finance Platform
+  End-to-End Results Report
+  Generated : 2026-03-08 11:24:23
+════════════════════════════════════════════════════════════════════════════════
+
+────────────────────────────────────────────────────────────────────────────────
+  A.  DATA  –  Real Market Data (yfinance, 5-year)
+────────────────────────────────────────────────────────────────────────────────
+  Universe   : AAPL, MSFT, GOOGL, AMZN, NVDA, META, JPM, JNJ, GLD, XOM
+  Period     : 2021-03-08 → 2026-03-06
+  Days       : 1256  |  Risk-Free: 4.5%
+
+  Ticker   Ann Return   Ann Vol   Sharpe     Skew
+  ------------------------------------------------
+  AAPL        20.26%   27.57%   0.572   0.454
+  MSFT        16.04%   26.19%   0.441   0.011
+  GOOGL       26.75%   30.71%   0.725   0.088
+  AMZN        13.59%   35.26%   0.258   0.124
+  NVDA        68.22%   51.84%   1.229   0.538
+  META        28.34%   43.57%   0.547  -0.141
+  JPM         18.33%   24.35%   0.568   0.099
+  JNJ         12.72%   16.64%   0.494   0.095
+  GLD         23.61%   17.24%   1.108  -0.776
+  XOM         25.67%   26.59%   0.796  -0.187
+
+────────────────────────────────────────────────────────────────────────────────
+  B.  PORTFOLIO OPTIMISATION  (backtested, monthly rebalance, 5 bps costs)
+────────────────────────────────────────────────────────────────────────────────
+
+  Strategy                                              Ann Ret     Vol  Sharpe  Sortino    MaxDD    Alpha   Beta
+  ────────────────────────────────────────────────────────────────────────────────────────────────────
+  Equal-Weight (Baseline)                               25.77% 19.15%  1.111    1.547 -28.31%   0.103   1.05
+  SPY Benchmark                                         13.16% 16.98%  0.510    0.700 -24.50%   0.000   1.00
+  Min-Variance                                          19.66% 11.29%  1.344    1.906 -13.07%   0.122   0.45
+  Max-Sharpe (Markowitz)                                32.63% 14.65%  1.920    2.832 -19.22%   0.206   0.62
+  Quantum-Enhanced (QUBO / DE+SLSQP, research.quantum.portfolio_quantum)  33.68% 15.05%  1.939    2.859 -20.63%   0.213   0.63
+
+  >>> Quantum-Enhanced vs Equal-Weight:
+      Sharpe improvement  : +74.6%  (target: 20–50%)
+      MaxDD improvement   : +27.1%  (target: 10–30% lower)
+
+  Top holdings (Quantum-Enhanced (QUBO / DE+SLSQP, research.quantum.portfolio_quantum)):
+    GLD     34.69%
+    JNJ     26.77%
+    NVDA    21.71%
+    XOM     16.83%
+
+────────────────────────────────────────────────────────────────────────────────
+  C.  MONTE CARLO RISK  (Portfolio: Quantum-Enhanced (QUBO / DE+SLSQP, research.quantum.portfolio_quantum))
+────────────────────────────────────────────────────────────────────────────────
+  Method       : research.core.monte_carlo.simulate_gbm_paths
+  Vol model    : EWMA+GARCH+HAR ensemble (research.ml.volatility_forecast, ann=0.1821)
+  Paths        : 10,000  |  Horizon: 252 days (1 year)
+  Computation  : 119ms
+
+  Return Distribution (1-Year Forward):
+    Mean     : +35.74%
+    Median   : +33.50%
+    Std Dev  : 24.65%
+    Skewness : 0.5493
+    Kurtosis : 0.7215
+
+  Value-at-Risk (1-Year):
+    95%  VaR  : -1.31%     CVaR: -8.30%
+    99%  VaR  : -12.39%     CVaR: -17.56%
+
+  Consistency check (MC VaR vs backtest drawdown):
+    Backtest Max DD : -20.63%
+    MC 99% CVaR     : -17.56%
+    Assessment      : CONSISTENT – tail loss within 2.5× historical worst event
+
+  Percentiles:
+      1th : -12.39%
+      5th : -1.31%
+     10th : +6.07%
+     25th : +18.54%
+     50th : +33.50%
+     75th : +50.60%
+     90th : +68.22%
+     95th : +79.68%
+     99th : +103.19%
+
+  Stress Scenarios:
+  Scenario                          5% Loss  Mean Loss  VaR99 Breach
+  ─────────────────────────────────────────────────────────────────
+  2008 Financial Crisis            -67.81%   -10.05%           YES
+  COVID-19 Crash (2020)            -56.80%    -0.34%           YES
+  Rate Shock +300bps               -24.11%    22.31%           YES
+  Flash Crash                      -35.17%    24.49%           YES
+  Tech Bubble Burst                -42.50%    10.42%           YES
+
+────────────────────────────────────────────────────────────────────────────────
+  D.  GREEKS VALIDATION  (GIGA Numba JIT vs scipy reference)
+────────────────────────────────────────────────────────────────────────────────
+  Result: 12/12 test cases within 2% tolerance  |  Max error: 0.0004%
+
+  Instrument          ∆ err%  Γ err%  ν err%  Θ err%  ρ err%  Price err%   Status
+  ────────────────────────────────────────────────────────────────────────────────
+  ATM Call  1yr       0.0000  0.0000  0.0000  0.0000  0.0000     0.0001%      PASS
+  ATM Put   1yr       0.0000  0.0000  0.0000  0.0000  0.0000     0.0001%      PASS
+  ITM Call  1yr       0.0000  0.0000  0.0000  0.0000  0.0000     0.0000%      PASS
+  ITM Put   1yr       0.0000  0.0000  0.0000  0.0001  0.0000     0.0000%      PASS
+  OTM Call  6m        0.0000  0.0000  0.0000  0.0000  0.0000     0.0003%      PASS
+  OTM Put   6m        0.0000  0.0000  0.0000  0.0000  0.0001     0.0004%      PASS
+  MSFT ATM  3m        0.0000  0.0000  0.0000  0.0000  0.0000     0.0001%      PASS
+  AAPL OTM  6m        0.0000  0.0000  0.0000  0.0000  0.0000     0.0002%      PASS
+  AAPL ITM  6m        0.0000  0.0000  0.0000  0.0000  0.0000     0.0001%      PASS
+  NVDA OTM  4m        0.0000  0.0000  0.0000  0.0000  0.0000     0.0001%      PASS
+  ATM Call  1m        0.0000  0.0000  0.0000  0.0000  0.0000     0.0001%      PASS
+  ATM LEAP  2yr       0.0000  0.0000  0.0000  0.0000  0.0000     0.0000%      PASS
+
+  Modules used:
+    Pricing : research.core.black_scholes (Numba JIT)
+    Greeks  : research.core.greeks (Numba JIT)
+
+  -- Implied Volatility Round-Trip  (research.core.implied_volatility) --
+  Instrument                    Input σ   Mkt Price   IV Recov   Error %
+  ──────────────────────────────────────────────────────────────────────
+  CALL S=100 K=100 T=1.0yr       0.200     10.4506     0.2000   0.0000%
+  CALL S=110 K=100 T=0.5yr       0.250     15.1664     0.2500   0.0000%
+  PUT S=90 K=100 T=0.5yr         0.300     12.2450     0.3000   0.0000%
+  CALL S=430 K=430 T=0.25yr      0.215     20.8345     0.2150   0.0000%
+  CALL S=185 K=190 T=0.5yr       0.250     12.6744     0.2500   0.0000%
+  IV accuracy: 5/5 within 0.1% tolerance
+
+  -- Delta Hedging  (research.core.greeks_hedging.GreeksHedgingEngine) --
+  ATM Call (S=K=100, σ=20%, T=1yr):  Δ=63.6831  Γ=1.8762  ν=37.5240  Θ=-2.545249  ρ=53.2325
+  Hedge action : SELL_UNDERLYING  63.68 shares
+  Reason       : Portfolio delta=63.6831, selling 63.68 shares
+  Source       : GreeksHedgingEngine.delta_hedge (research.core.greeks_hedging)
+
+────────────────────────────────────────────────────────────────────────────────
+  F.  MARKET REGIME DETECTION  (research.ml.regime_detection.RegimeDetector)
+────────────────────────────────────────────────────────────────────────────────
+
+  Current regime (end of sample): MarketState.UNCERTAIN
+
+  Regimes: TRENDING_UP | TRENDING_DOWN | RANGING | HIGH_VOL | UNCERTAIN
+  Method: Gaussian Mixture Model on returns/volatility/momentum features
+
+────────────────────────────────────────────────────────────────────────────────
+  G.  RISK METRICS  (research.core.risk_metrics)
+────────────────────────────────────────────────────────────────────────────────
+
+  Metric                                          Value  Source
+  ───────────────────────────────────────────────────────────────────────────
+  Hist. 99% VaR (1-day)                       -2.3475%  research.core.risk_metrics
+  Hist. 95% VaR (1-day)                       -1.4045%  research.core.risk_metrics
+  Hist. 99% CVaR (1-day)                      -3.1280%  research.core.risk_metrics
+  Hist. 95% CVaR (1-day)                      -2.0120%  research.core.risk_metrics
+  Param. 99% VaR (1-day)                       2.0858%  research.core.risk_metrics.value_at_risk(method=parametric)
+  Param. 95% VaR (1-day)                       1.4397%  research.core.risk_metrics.value_at_risk(method=parametric)
+  Param. 99% CVaR (1-day)                      2.4070%  research.core.risk_metrics.conditional_var(method=parametric)
+  Information Ratio  (vs SPY)                   1.3318  research.core.risk_metrics.information_ratio
+  Max Drawdown (risk_metrics)                -20.6291%  research.core.risk_metrics.calculate_drawdown
+  Max Drawdown Duration                            209 days
+
+────────────────────────────────────────────────────────────────────────────────
+  H.  PLATFORM PERFORMANCE  (5,000 iterations each)
+────────────────────────────────────────────────────────────────────────────────
+
+  Operation                                     Mean (μs)  P50 (μs)  P95 (μs)  P99 (μs)      Ops/sec   Status
+  ────────────────────────────────────────────────────────────────────────────────────────────────────────
+  B-S call price (Numba JIT)                          0.3       0.3       0.4       0.4    3,252,244   Sub-ms
+  All 5 Greeks (Numba JIT)                            1.6       1.4       2.2       2.8      641,774   Sub-ms
+  Cholesky decomp (15×15)                             5.1       4.9       5.4       8.6      194,480   Sub-ms
+  Portfolio variance (15 assets)                     16.3      15.1      24.3      31.7       61,330   Sub-ms
+  Historical VaR (504 days)                          40.9      36.1      60.2      84.6       24,468   Sub-ms
+
+  Sub-millisecond (P99): 5/5 core operations
+
+────────────────────────────────────────────────────────────────────────────────
+  I.  QUANTUM SPEEDUP BENCHMARKS  (quantum-inspired simulator)
+────────────────────────────────────────────────────────────────────────────────
+
+  NOTE: QuantumPortfolioOptimizer uses a quantum-inspired classical simulation (DE + SLSQP polish). This is NOT IBM Q, D-Wave, or any real QPU hardware.
+
+  Method                                              Mean (ms)   P50 (ms)   P95 (ms)   P99 (ms) Notes
+  ─────────────────────────────────────────────────────────────────────────────────────────────────────────
+  SLSQP (classical)                                       4.686      4.366      6.548      6.755
+  DE (classical, maxiter=15)                             95.316     95.741    102.144    104.218
+  Quantum-Inspired (DE+SLSQP classical sim)           12829.332  12687.497  13710.172  13724.599  ← 0.0× vs SLSQP p50
+
+  >>> Quantum-inspired vs SLSQP  Speedup (P50): 0.00×  (< 1× slower – DE explores more broadly)
+
+  Monte Carlo Convergence (paths vs VaR stability):
+     N Paths    99% VaR   99% CVaR   Elapsed (ms)
+  ──────────────────────────────────────────────────
+         500  -17.6738%  -24.5810%            4.3
+       1,000  -19.3179%  -23.5219%            9.7
+       2,500  -20.0179%  -25.4626%           24.5
+       5,000  -20.0064%  -24.9139%           48.6
+      10,000  -19.1870%  -24.2262%           89.6
+
+  Reference 99% VaR at 10,000 paths: -19.1870%
+       500 paths  |  drift from 10k-path reference: 1.51pp
+     1,000 paths  |  drift from 10k-path reference: 0.13pp
+     2,500 paths  |  drift from 10k-path reference: 0.83pp
+     5,000 paths  |  drift from 10k-path reference: 0.82pp
+
+  Quantum VaR Estimation  (research.quantum.quantum_monte_carlo.QuantumMonteCarlo):
+    Algorithm           : Historical
+    Qubits (uncertainty): 0
+    Quantum VaR (1%)    : -2.3475%
+    Classical VaR (1%)  : -2.3475%
+    Theoretical speedup : 1.0x  (Grover: 2^n_qubits)
+    Elapsed             : 1.0ms
+    95%% CI             : [-0.0211, -0.0258]
+
+────────────────────────────────────────────────────────────────────────────────
+  J.  WALK-FORWARD IS/OOS VALIDATION
+────────────────────────────────────────────────────────────────────────────────
+  Engine             : backtesting.walk_forward.WalkForwardOptimizer
+  Strategy           : Momentum MA crossover (equal-weight portfolio)
+  Param grid         : fast_ma=[5,10,20]  slow_ma=[21,42,63]
+  In-Sample window   : 252 trading days (~1 year)
+  Out-of-Sample win  : 63 trading days (~1 quarter)
+  Total windows      : 24
+
+  Mean IS  Sharpe    : +1.975
+  Mean OOS Sharpe    : +0.781
+  Mean Degradation   : +0.876  (IS - OOS; lower = more robust)
+  OOS Positive Rate  : 38%  (windows with positive OOS Sharpe)
+  Overfitting flag   : DETECTED  (WalkForwardOptimizer internal heuristic)
+
+      IS Start       IS End      OOS End  IS Sharpe  OOS Sharpe   Degrad.  Opt Params
+  ------------------------------------------------------------------------------------------
+    2021-03-08   2021-11-15   2022-01-18      3.528       0.000     1.000  {'fast_ma': 10, 'slow_ma': 4 [--]
+    2021-05-10   2022-01-17   2022-03-22      1.273       2.313    -0.817  {'fast_ma': 5, 'slow_ma': 21 [OK]
+    2021-07-12   2022-03-21   2022-05-24      0.646      -2.889     5.469  {'fast_ma': 5, 'slow_ma': 21 [--]
+    2021-09-13   2022-05-23   2022-07-26     -0.382      -3.565     8.341  {'fast_ma': 5, 'slow_ma': 21 [--]
+    2021-11-15   2022-07-25   2022-09-27     -0.066       0.000    -1.000  {'fast_ma': 10, 'slow_ma': 6 [--]
+    2022-01-17   2022-09-26   2022-11-29      0.835       0.000     1.000  {'fast_ma': 10, 'slow_ma': 4 [--]
+    2022-03-21   2022-11-28   2023-01-31      0.740       0.000     1.000  {'fast_ma': 20, 'slow_ma': 4 [--]
+    2022-05-23   2023-01-30   2023-04-04      1.482       2.894    -0.953  {'fast_ma': 20, 'slow_ma': 2 [OK]
+    2022-07-25   2023-04-03   2023-06-06      1.076       2.401    -1.232  {'fast_ma': 20, 'slow_ma': 4 [OK]
+    2022-09-26   2023-06-05   2023-08-08      2.070       0.000     1.000  {'fast_ma': 10, 'slow_ma': 6 [--]
+    2022-11-28   2023-08-07   2023-10-10      2.717       5.235    -0.926  {'fast_ma': 10, 'slow_ma': 2 [OK]
+    2023-01-30   2023-10-09   2023-12-12      3.046       3.659    -0.201  {'fast_ma': 10, 'slow_ma': 2 [OK]
+    2023-04-03   2023-12-11   2024-02-13      2.857       3.696    -0.294  {'fast_ma': 10, 'slow_ma': 2 [OK]
+    2023-06-05   2024-02-12   2024-04-16      3.081      -1.486     1.482  {'fast_ma': 10, 'slow_ma': 2 [--]
+    2023-08-07   2024-04-15   2024-06-18      2.994       0.000     1.000  {'fast_ma': 20, 'slow_ma': 6 [--]
+    2023-10-09   2024-06-17   2024-08-20      3.614       5.591    -0.547  {'fast_ma': 10, 'slow_ma': 2 [OK]
+    2023-12-11   2024-08-19   2024-10-22      3.791       4.200    -0.108  {'fast_ma': 10, 'slow_ma': 2 [OK]
+    2024-02-12   2024-10-21   2024-12-24      2.964       0.000     1.000  {'fast_ma': 10, 'slow_ma': 6 [--]
+    2024-04-15   2024-12-23   2025-02-25      2.208      -4.013     2.817  {'fast_ma': 10, 'slow_ma': 2 [--]
+    2024-06-17   2025-02-24   2025-04-29      2.126      -0.562     1.264  {'fast_ma': 10, 'slow_ma': 2 [--]
+    2024-08-19   2025-04-28   2025-07-01      0.554       1.264    -1.284  {'fast_ma': 10, 'slow_ma': 2 [OK]
+    2024-10-21   2025-06-30   2025-09-02      1.589       0.000     1.000  {'fast_ma': 20, 'slow_ma': 6 [--]
+    2024-12-23   2025-09-01   2025-11-04      2.018       0.000     1.000  {'fast_ma': 5, 'slow_ma': 63 [--]
+    2025-02-24   2025-11-03   2026-01-06      2.643       0.000     1.000  {'fast_ma': 20, 'slow_ma': 6 [--]
+
+  >>> Walk-Forward Assessment: REVIEW  (38% positive OOS windows)
+
+────────────────────────────────────────────────────────────────────────────────
+  K.  AMERICAN OPTIONS  (CRR Binomial Tree vs Black-Scholes)
+────────────────────────────────────────────────────────────────────────────────
+  Parameters: S=100, r=5%, T=1yr, n_steps=200
+  Reference BS European put (ATM, σ=20%): 5.5735
+
+  Instrument            Strike      σ   BS Eur   Bin Eur   Bin Amer  Eur Err%  Early Exer
+  ────────────────────────────────────────────────────────────────────────────────────────
+  ATM Put                  100    20%   5.5735    5.5635     6.0864   0.1791%     0.5228  ← EEP!
+  ITM Put                   90    20%   2.3101    2.3138     2.4766   0.1620%     0.1627  ← EEP!
+  OTM Put                  110    20%  10.6753   10.6816    11.9773   0.0593%     1.2956  ← EEP!
+  Deep ITM Put              80    25%   1.5109    1.5138     1.5799   0.1935%     0.0662  ← EEP!
+  High-Vol Put             100    40%  13.1459   13.1264    13.6573   0.1480%     0.5309  ← EEP!
+  ATM Call                 100    20%  10.4506   10.4406    10.4406   0.0955%     0.0000
+  ITM Call                 110    20%   6.0401    6.0464     6.0464   0.1048%     0.0000
+  OTM Call                  90    20%  16.6994   16.7032    16.7032   0.0224%     0.0000
+
+  Convergence (ATM Eur Put, σ=20%, T=1yr):
+    Steps     Price    Err vs BS   Elapsed (μs)
+  ──────────────────────────────────────────────
+       10    5.3764      3.5377%           12.3
+       25    5.6439      1.2628%           21.7
+       50    5.5336      0.7157%           14.4
+      100    5.5536      0.3583%           74.3
+      200    5.5635      0.1793%          184.3
+      500    5.5695      0.0717%         2150.3
+
+  >>> Binomial European: max error vs BS = 0.1935%  (n_steps=200)
+  >>> Early exercise premium > 0.001: 5/8 cases (American ≥ European always)
+
+────────────────────────────────────────────────────────────────────────────────
+  L.  VOLATILITY SURFACE  (SVI Stochastic Volatility Inspired)
+────────────────────────────────────────────────────────────────────────────────
+  Synthetic equity vol surface (negative put skew, OTM puts carry premium)
+
+  SVI model (3M)  →  a=0.0091  b=0.0079  ρ=-0.3427  σ=0.1706  m=0.2409
+
+  3M Skew Metrics:
+    ATM vol       : 22.00%
+    Put skew      : +0.0000  (more negative = steeper downside skew)
+    Call skew     : +0.0000
+
+
+  3M Volatility Smile:
+    Strike    IV (%)   Moneyness
+  ────────────────────────────────
+        80    23.91%     -0.2231
+        85    23.39%     -0.1625
+        90    22.90%     -0.1054
+        95    22.43%     -0.0513
+       100    22.00%      0.0000
+       105    21.60%      0.0488
+       110    21.24%      0.0953
+       115    20.93%      0.1398
+       120    20.68%      0.1823
+
+────────────────────────────────────────────────────────────────────────────────
+  M.  ALPHA FACTOR RESEARCH  (AlphaResearchPipeline + AlphaCombiner)
+────────────────────────────────────────────────────────────────────────────────
+  Engine     : research.core.alpha_factor_library.AlphaResearchPipeline
+  Factors    : 6  |  Significant (BH FDR 5%): 0
+  N obs      : 1235  (20-day rolling window over portfolio returns)
+  Combiner IC: +0.0285  (IC-weighted AlphaCombiner  ok=True)
+
+  Factor                   Sig   p-value   t-stat  Sharpe  InfoRatio  Ret|Active  Ret|Inact
+  --------------------------------------------------------------------------------------------
+  kappa_alpha               no    1.0000    0.000   0.000      0.000     0.0000%    0.0000%
+  entropy_alpha             no    1.0000    0.000   0.000      0.000     0.0000%    0.0000%
+  gamma_alpha               no    1.0000    0.621   0.022      5.198     0.1179%    0.0749%
+  ergodicity_alpha          no    1.0000   -0.093   0.002     -0.176     0.0942%    0.1013%
+  momentum_alpha            no    1.0000   -0.093   0.502     -0.097     0.0942%    0.1013%
+  vol_regime_alpha          no    1.0000   -0.765   0.210     -2.750     0.0697%    0.1227%
+
+  >>> Alpha Assessment: WEAK/NOISE  (0/6 factors significant)
+
+════════════════════════════════════════════════════════════════════════════════
+  EXECUTIVE SUMMARY
+════════════════════════════════════════════════════════════════════════════════
+  Data source              : Yahoo Finance  (2021-03-08 – 2026-03-06, 5 years)
+  Best strategy            : Quantum-Enhanced (QUBO / DE+SLSQP, research.quantum.portfolio_quantum)
+  Sharpe ratio             : 1.939  (equal-weight: 1.111  →  +74.6%)
+  Annualised return        : 33.68%
+  Annualised volatility    : 15.05%
+  Max drawdown             : -20.63%  (equal-weight: -28.31%  →  +27.1% better)
+  MC 99% VaR (1yr)         : -12.39%
+  MC 99% CVaR (1yr)        : -17.56%
+  Daily 99% VaR (hist)     : -2.3475%  (research.core.risk_metrics)
+  Information Ratio vs SPY : 1.332  (research.core.risk_metrics.information_ratio)
+  Quantum optimizer        : QuantumPortfolioOptimizer (research.quantum)
+  MC vol model             : EWMA+GARCH+HAR ensemble (research.ml.volatility_forecast, ann=0.1821)
+  Greeks validation        : 12/12 PASS  |  max error 0.0004%
+  IV round-trip            : 5/5 within 0.1% (implied_volatility_bisection)
+  Sub-ms operations        : 5/5  (P50/P95/P99 reported)
+  SLSQP p50 latency        : 4.366ms  p95=6.548ms  p99=6.755ms
+  Quantum-inspired p50     : 12687.497ms  p95=13710.172ms  (0.00× vs SLSQP p50)  ← classical sim, not real QPU
+  Walk-forward OOS Sharpe  : +0.781  (38% positive windows, degradation=+0.876)
+  Binomial tree accuracy   : max Eur err 0.1935%  |  5/8 cases show early-exercise premium
+  Vol surface (SVI)        : ATM 3M=22.0%  put skew=+0.0000  SVI fit: OK
+  QuantumMonteCarlo VaR(1%): -2.3475%  classical=-2.3475%  speedup=1x  algo=Historical
+  Alpha factors            : 0/6 significant (BH FDR 5%)  combiner IC=+0.0285  [none]
+  Total run time           : 194.4s
+
+  ── Modules Integrated ──────────────────────────────────────────────────
+    [✓] research.core.black_scholes         (Numba JIT pricing)
+    [✓] research.core.greeks                (Numba JIT Greeks)
+    [✓] research.core.monte_carlo           (simulate_gbm_paths)
+    [✓] backtesting.metrics                 (PerformanceAnalyzer)
+    [✓] research.quantum.portfolio_quantum  (QuantumPortfolioOptimizer)
+    [✓] research.core.risk_metrics          (VaR/CVaR/IR/drawdown)
+    [✓] research.ml.regime_detection        (RegimeDetector)
+    [✓] research.ml.volatility_forecast     (EWMA+GARCH+HAR)
+    [✓] research.core.implied_volatility    (IV bisection + surface)
+    [✓] research.core.greeks_hedging        (GreeksHedgingEngine)
+    [✓] research.core.binomial_tree         (CRR American options)
+    [✓] research.core.volatility_surface    (SVI smile fitting)
+    [✓] backtesting.walk_forward            (WalkForwardOptimizer)
+    [✓] research.quantum.quantum_monte_carlo (QuantumMonteCarlo VaR)
+    [✓] research.core.alpha_factor_library  (AlphaResearchPipeline + AlphaCombiner)
+════════════════════════════════════════════════════════════════════════════════

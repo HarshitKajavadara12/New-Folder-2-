@@ -1,0 +1,16 @@
+[meta]
+generated_at = "2026-01-09T01:02:51.759030"
+source = "demo_complete_system.py (Research Mode)"
+kappa_score = 6.5289
+
+[execution_params]
+max_slippage_bps = 5
+chaos_mode = false
+
+[regime_params.LOW_VOL]
+leverage = 2.0
+kappa = 6.5289
+
+[regime_params.HIGH_VOL]
+leverage = 0.5
+kappa = 12.0

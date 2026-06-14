@@ -1,0 +1,101 @@
+# =============================================================================
+# GIGA SYSTEM - Modern Python Packaging (PEP 517/518)
+# =============================================================================
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "giga-system"
+version = "1.0.0"
+description = "Greek Intelligence for Global Analysis - Quantitative Finance Platform"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.11"
+authors = [
+    {name = "GIGA Contributors", email = "giga@quantfinance.dev"}
+]
+keywords = [
+    "quantitative-finance",
+    "options-pricing",
+    "black-scholes",
+    "greeks",
+    "monte-carlo",
+    "quantum-computing",
+    "hft",
+    "trading",
+    "risk-management",
+    "portfolio-optimization"
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Financial and Insurance Industry",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Office/Business :: Financial :: Investment",
+]
+
+dependencies = [
+    "numpy>=1.26.0",
+    "scipy>=1.11.0",
+    "numba>=0.58.0",
+    "sympy>=1.12",
+    "polars>=0.19.0",
+    "duckdb>=0.9.0",
+    "pyarrow>=14.0.0",
+    "QuantLib>=1.32",
+    "qiskit>=0.45.0",
+    "qiskit-aer>=0.13.0",
+    "vectorbt>=0.26.0",
+    "rpy2>=3.5.0",
+    "streamlit>=1.29.0",
+    "plotly>=5.18.0",
+    "toml>=0.10.0",
+    "loguru>=0.7.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4.0",
+    "pytest-benchmark>=4.0.0",
+    "black>=23.0.0",
+    "isort>=5.12.0",
+    "mypy>=1.7.0",
+]
+quantum = [
+    "qiskit-optimization>=0.6.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/giga-system/giga"
+Documentation = "https://giga-system.readthedocs.io"
+Repository = "https://github.com/giga-system/giga"
+Issues = "https://github.com/giga-system/giga/issues"
+
+[project.scripts]
+giga = "visualization.app:main"
+
+[tool.setuptools.packages.find]
+exclude = ["tests*", "notebooks*", "docs*"]
+
+[tool.black]
+line-length = 100
+target-version = ['py311']
+include = '\.pyi?$'
+
+[tool.isort]
+profile = "black"
+line_length = 100
+
+[tool.mypy]
+python_version = "3.11"
+warn_return_any = true
+warn_unused_configs = true
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+addopts = "-v --tb=short"
